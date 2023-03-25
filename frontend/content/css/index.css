@@ -1,0 +1,12 @@
+@import "reset.css";
+@import "custom.css";
+@import "custom-font.css";
+
+body {
+  direction: rtl;
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 100vh;
+  column-gap: 20px;
+  background-color: var(--white-100);
+}
