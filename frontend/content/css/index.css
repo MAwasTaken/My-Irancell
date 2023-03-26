@@ -3,10 +3,49 @@
 @import "custom-font.css";
 
 body {
-  direction: rtl;
+	direction: rtl;
+	display: flex;
+	flex-direction: row-reverse;
+	min-height: 100vh;
+	column-gap: 20px;
+	background-color: var(--white-100);
+}
+
+.left-side {
+  padding: 20px 0 20px 20px;
+  width: 500px;
   display: flex;
-  flex-direction: row-reverse;
-  min-height: 100vh;
+  flex-direction: column;
+}
+
+.profile-box {
+  direction: rtl;
+  background-color: var(--white-50);
+  padding: 15px 20px;
+  border-radius: 25px;
   column-gap: 20px;
-  background-color: var(--white-100);
+}
+
+.profile-wrapper {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  padding: 6px;
+  background-color: var(--gold-400);
+  border-radius: 50%;
+}
+
+.user-profile {
+  position: relative;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-box-desc {
+  row-gap: 5px;
+}
+
+.user-name,
+.user-number {
+  color: var(--gray-650)
 }
