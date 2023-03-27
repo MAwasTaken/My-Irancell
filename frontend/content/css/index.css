@@ -11,6 +11,8 @@ body {
 	background-color: var(--white-100);
 }
 
+/* profile box */
+
 .left-side {
   padding: 20px 0 20px 20px;
   width: 500px;
@@ -48,4 +50,31 @@ body {
 .user-name,
 .user-number {
   color: var(--gray-650)
+}
+
+/* sim card charge */
+
+.sim-card-charge-box {
+  background-color: var(--gold-50);
+  padding: 20px;
+  border-radius: 30px;
+  margin-top: 20px;
+  height: 100%;
+}
+
+.sim-card-charge-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.charge-btn {
+  background-color: var(--gold-400);
+  width: 150px;
+  border-radius: 5px;
+  color: var(--white-50);
+  font-size: 1rem;
+  box-shadow: 0 0 8px var(--gold-400);
+  outline: none;
+  border: none;
 }
