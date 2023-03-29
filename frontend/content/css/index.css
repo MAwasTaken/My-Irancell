@@ -14,67 +14,93 @@ body {
 /* profile box */
 
 .left-side {
-  padding: 20px 0 20px 20px;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
+	padding: 20px 0 20px 20px;
+	width: 500px;
+	display: flex;
+	flex-direction: column;
 }
 
 .profile-box {
-  direction: rtl;
-  background-color: var(--white-50);
-  padding: 15px 20px;
-  border-radius: 25px;
-  column-gap: 20px;
+	direction: rtl;
+	background-color: var(--white-50);
+	padding: 15px 20px;
+	border-radius: 25px;
+	column-gap: 20px;
 }
 
 .profile-wrapper {
-  position: relative;
-  width: 65px;
-  height: 65px;
-  padding: 6px;
-  background-color: var(--gold-400);
-  border-radius: 50%;
+	position: relative;
+	width: 65px;
+	height: 65px;
+	padding: 6px;
+	background-color: var(--gold-400);
+	border-radius: 50%;
 }
 
 .user-profile {
-  position: relative;
-  object-fit: cover;
-  border-radius: 50%;
+	position: relative;
+	object-fit: cover;
+	border-radius: 50%;
 }
 
 .profile-box-desc {
-  row-gap: 5px;
+	row-gap: 5px;
 }
 
 .user-name,
 .user-number {
-  color: var(--gray-650)
+	color: var(--gray-650);
 }
 
 /* sim card charge */
 
 .sim-card-charge-box {
-  background-color: var(--gold-50);
-  padding: 20px;
-  border-radius: 30px;
-  margin-top: 20px;
-  height: 100%;
+	background-color: var(--gold-50);
+	padding: 20px;
+	border-radius: 30px;
+	margin-top: 20px;
+	height: 100%;
 }
 
 .sim-card-charge-title {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  text-align: center;
+	margin-top: 10px;
+	font-size: 1.2rem;
+	text-align: center;
 }
 
 .charge-btn {
-  background-color: var(--gold-400);
-  width: 150px;
-  border-radius: 5px;
-  color: var(--white-50);
-  font-size: 1rem;
-  box-shadow: 0 0 8px var(--gold-400);
-  outline: none;
-  border: none;
+	background-color: var(--gold-400);
+	width: 150px;
+	border-radius: 5px;
+	color: var(--white-50);
+	font-size: 1rem;
+	box-shadow: 0 0 8px var(--gold-400);
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.charge-progress {
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	display: flex;
+	background-color: var(--gold-50);
+	margin: 25px 0;
+}
+
+.charge-progress .overlay {
+	border-radius: 50%;
+	width: 85%;
+	height: 85%;
+	margin: auto;
+	background-color: var(--gold-50);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #00a3ff;
+}
+
+.progress-10 {
+  background-image: -webkit-linear-gradient(0deg, #e4ebec 50%, transparent 50%), -webkit-linear-gradient(right, var(--gold-400) 50%, #e4ebec 50%);
 }
