@@ -129,3 +129,24 @@ body {
 .active-service-box-desc {
   line-height: 25px;
 }
+
+.download-app-box {
+  position: relative;
+  width: 90%;
+  top: 100%;
+  transform: translateY(-550px);
+  background-color: var(--white-50);
+  border-radius: 15px;
+  flex-direction: row-reverse;
+  padding: 20px;
+}
+
+.download-app-box img {
+  width: 80px;
+  image-rendering: pixelated;
+  border-radius: 20px;
+}
+
+.download-app-box h1 {
+  font-size: 1.2rem;
+}
