@@ -1,7 +1,7 @@
 import initChart from "./chart.js";
 
 initChart(
-  ["7.1", "7.15", "7.18", "7.25", "7.28"],
+  ["۷/۱", "۷/۱۰", "۷/۱۸", "۷/۲۵", "۷/۲۸"],
   [500, 1000, 2200, 2600, 1700],
   document.querySelector("#myChart").getContext('2d'),
 )

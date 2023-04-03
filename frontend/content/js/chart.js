@@ -5,7 +5,7 @@ const initChart = (labels, data, initElement) => {
 			labels: [...labels],
 			datasets: [
 				{
-					backgroundColor: "#fffcef",
+					backgroundColor: "#feeeb7",
 					borderColor: "#fdc816",
 					data: [...data],
 					tension: "0.45",
