@@ -1,0 +1,30 @@
+users:
+  id
+  firstname
+  lastname
+  profile
+  charge
+
+services:
+  id
+  icon
+  title
+  max_date
+  isActive
+
+recommend_packedt:
+  id
+  title
+  off
+  price
+  max_date
+  userID
+
+seles:
+  id
+  buy_date
+  max_date
+  title
+  off
+  price
+  userID
