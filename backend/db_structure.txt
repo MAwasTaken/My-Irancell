@@ -4,6 +4,7 @@ users:
   lastname
   profile
   charge
+  phone
 
 services:
   id
@@ -12,7 +13,7 @@ services:
   max_date
   isActive
 
-recommend_packedt:
+recommend_packet:
   id
   title
   off
@@ -27,4 +28,4 @@ seles:
   title
   off
   price
-  userID
+  userIDc
