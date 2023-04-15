@@ -1,5 +1,7 @@
+// packages
 const mysql = require("mysql");
 
+// creat connnection to mysql database
 const myIrancellDB = mysql.createConnection({
 	host: "127.0.0.1",
 	user: "root",
@@ -7,4 +9,5 @@ const myIrancellDB = mysql.createConnection({
 	database: "myIrancell",
 });
 
+// exports
 module.exports = myIrancellDB;
