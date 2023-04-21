@@ -1,19 +1,21 @@
 // components
-const myIrancellDB = require("../db/MyIrancellDB");
+const myIrancellDB = require("./../db/MyIrancellDB");
 
 const getUserIDFromUserToken = (userToken) => {
-	let getMainUserIDQuery = `SELECT id FROM users WHERE token=${userToken}`;
+	let getMainUserIDQuery = `SELECT id FROM users WHERE token="${userToken}"`;
 
-	myIrancellDB.query(getMainUserIDQuery, [], (error, result) => {
-		if (error) {
-			console.log("Error In Getting getUserIDFromUserToken => ", error);
+	return new Promise((resolve, reject) => {
+		myIrancellDB.query(getMainUserIDQuery, (error, result) => {
+			if (error) {
+				console.log("Error In Getting getUserIDFromUserToken => ", error);
 
-			return false;
-		}
+				return false;
+			}
 
-		return result;
+			resolve(result);
+		});
 	});
 };
 
 // exports
-module.exports = { getUserIDFromUserToken };
+module.exports = getUserIDFromUserToken;

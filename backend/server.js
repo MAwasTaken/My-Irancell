@@ -23,7 +23,7 @@ app.use(cors());
 app.get("/api/users", (req, res) => {
 	let userToken = req.headers.authorization;
 
-	let getMainUserQuery = `SELECT * FROM users WHERE token=${userToken}`;
+	let getMainUserQuery = `SELECT * FROM users WHERE token="${userToken}"`;
 
 	myIrancellDB.query(getMainUserQuery, (error, result) => {
 		if (error) res.send(null);
@@ -45,10 +45,12 @@ app.get("/api/services/:isActive", (req, res) => {
 
 // GET recommended packets
 app.get("/api/recommend-packs", (req, res) => {
+	let userID = null;
 	let userToken = req.headers.authorization;
-	let userID = getUserIDFromUserToken(userToken);
 
-	let getUserRecommendPacksQuery = `SELECT * FROM recommend_packet WHERE userID=${userID}`;
+	getUserIDFromUserToken(userToken).then((result) => (userID = result[0].id));
+
+	let getUserRecommendPacksQuery = `SELECT * FROM recommend_packet WHERE userID="${userID}"`;
 
 	myIrancellDB.query(getUserRecommendPacksQuery, (error, result) => {
 		if (error) res.send(null);
@@ -68,3 +70,6 @@ app.get("/api/user-buy", (req, res) => {
 		else res.send(result);
 	});
 });
+
+// port
+app.listen(3000);
