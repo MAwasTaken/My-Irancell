@@ -48,26 +48,33 @@ app.get("/api/recommend-packs", (req, res) => {
 	let userID = null;
 	let userToken = req.headers.authorization;
 
-	getUserIDFromUserToken(userToken).then((result) => (userID = result[0].id));
+	getUserIDFromUserToken(userToken).then((result) => {
+		userID = result[0].id;
 
-	let getUserRecommendPacksQuery = `SELECT * FROM recommend_packet WHERE userID="${userID}"`;
+		let getUserRecommendPacksQuery = `SELECT * FROM recommend_packet WHERE userID=${userID}`;
 
-	myIrancellDB.query(getUserRecommendPacksQuery, (error, result) => {
-		if (error) res.send(null);
-		else res.send(result);
+		myIrancellDB.query(getUserRecommendPacksQuery, (error, result) => {
+			if (error) res.send(null);
+			else res.send(result);
+		});
 	});
 });
 
 // GET sales
 app.get("/api/user-buy", (req, res) => {
 	let userToken = req.headers.authorization;
-	let userID = getUserIDFromUserToken(userToken);
 
-	let getUserByInfo = `SELECT * FROM sales WHERE userID=${userID}`;
+	let userID = null;
 
-	myIrancellDB.query(getUserByInfo, (error, result) => {
-		if (error) res.send(null);
-		else res.send(result);
+	getUserIDFromUserToken(userToken).then((result) => {
+		userID = result[0].id;
+
+		let getUserByInfo = `SELECT * FROM sales WHERE userID=${userID}`;
+
+		myIrancellDB.query(getUserByInfo, (error, result) => {
+			if (error) res.send(null);
+			else res.send(result);
+		});
 	});
 });
 
