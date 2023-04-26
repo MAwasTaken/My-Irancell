@@ -1,0 +1,28 @@
+main url = localhost:3000/api
+
+
+
+1. Get Main user Info
+route: /users
+method: GET
+header: authorization => توکن کاربر
+
+
+
+2. Get All Active/non-Active services
+route: /services/:isActive
+isActive: 0 (خدمات غیرفعال) || (خدمات فعال) 1 
+
+
+
+3. Get Main User Recommend Packs
+route: /recommend-packs
+method: GET
+header: authorization => توکن کاربر
+
+
+
+4. Get Main User Packet Buying
+route: /user-buy
+method: GET
+header: authorization => توکن کاربر
