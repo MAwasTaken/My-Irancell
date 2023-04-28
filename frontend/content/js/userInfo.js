@@ -15,7 +15,6 @@ window.addEventListener("load", () => {
 	})
 		.then((res) => res.json())
 		.then((user) => {
-			console.log(user);
 			userProfile.setAttribute("src", `content/${user[0].profile}`);
 			userPersonalInfo.innerHTML = `سلام٬ ${user[0].firstname} ${user[0].lastname}`;
 			userPhoneNumber.innerHTML = `+98${user[0].phone}`;
