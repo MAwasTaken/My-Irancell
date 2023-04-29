@@ -4,7 +4,6 @@ window.addEventListener("load", () => {
 	fetch(`${mainUrlApi}/services/1`)
 		.then((res) => res.json())
 		.then((services) => {
-      console.log(services)
       services.forEach(service => {
         servicesTitle.insertAdjacentHTML('afterend', `
           <div class="active-service-box flex align-items-center vazir-fb">
